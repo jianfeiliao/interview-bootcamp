@@ -1,0 +1,93 @@
+Welcome to Facebook!
+
+This is just a simple shared plaintext pad, with no execution capabilities.
+
+When you know what language you'd like to use for your interview,
+simply choose it from the dropdown in the top bar.
+
+Enjoy your interview!
+
+
+1) {ab | cd} => ab,cd
+2) {a,b, | cd,} => "a,b,","cd,"
+3) {a,"b" | cd"} => "a,""b""",cd""
+
+
+string_replace(string haystack, string needle, string replacement);
+"aaa" = string_replace("abb", "b", "a")
+
+
+string encode(array<string> input) {
+
+
+}
+
+"a,""b""",cd"" => a,""b"",cd"" => a,"b",cd" => a,"b" | cd"
+
+
+input: "a,""b""",cd"","e,f" => {"a,""b""" | cd""}
+
+"a"",",b => a", 
+
+i=0, s[i] = "
+i=1, s[i] = a
+            " # closing quote = true
+            " # closing quote = false
+            , # not separator
+            " # closing quote = true
+            , # is separator
+
+#check each char in string
+  # if char == "
+    # find the next " follow by a ,
+    # if next char is , and not have matching closing "
+      # not the separator
+    # if the next is "
+      #if the next next is ,
+        # then you have the separator
+        
+func findSeparators(s string) []int {
+  result := make([]int, 0)
+  numQuotes = 0
+  
+  for i := 0; i < len(s); i++ {
+      if s[i] == '"' {
+        numQuotes++
+      }
+      if s[i] == ',' && numQuotes % 2 == 0 {
+        result = append(result, i)
+      }
+  }
+}
+        
+
+func encode(input []string) string {
+  for _, str := range input {
+      if containsQuote(str) {
+        str = stringReplace(str, '"', "\"\"")
+      }
+      
+      if containsComma(str) {
+        str = '"' + str + '"'
+      } 
+  }
+  
+  return strings.Join(input, ',')
+}
+
+func decode(s string) []string {
+
+
+}
+
+func containsComma(s string) bool {
+
+}
+
+func containsQuote(s string) bool {
+
+}
+
+
+
+
